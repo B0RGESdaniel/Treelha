@@ -1,12 +1,17 @@
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { MyTreelhas } from './pages/MyTreelhas';
+import { AuthContextProvider } from './contexts/AuthContext';
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path="/" exact component={Home}/>
-      <Route path="/treelhas" component={MyTreelhas}/>
+      <AuthContextProvider>
+        <Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path="/treelhas" component={MyTreelhas}/>
+        </Switch>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 }

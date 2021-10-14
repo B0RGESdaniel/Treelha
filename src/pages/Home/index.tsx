@@ -1,16 +1,20 @@
-
 import { useHistory } from 'react-router-dom';
 
 import googleImg from '../../assets/images/google.svg';
 import logoHomeImg from '../../assets/images/logo-home.svg';
+import { useAuth } from '../../hooks/useAuth';
 
 import './styles.scss';
 
 export function Home(){
 
     const history = useHistory();
+    const { user, signInWithGoogle } = useAuth();
 
-    function handleSignInWithGoogle(){
+    async function handleSignInWithGoogle(){
+        if(!user){
+            await signInWithGoogle();
+        }      
         history.push('/treelhas')
     }
 
@@ -31,6 +35,7 @@ export function Home(){
                         <img src={googleImg} alt="Logo google" />
                         Fazer login com o google
                     </button>
+                    <span>For better experience, add a profile picture to your Google account.</span>
                 <footer>
                     <p>2021 <strong>Treelha</strong> &copy; All rights reserved</p>
                 </footer>

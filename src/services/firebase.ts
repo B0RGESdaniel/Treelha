@@ -4,13 +4,13 @@ import 'firebase/compat/auth';
 import 'firebase/compat/database';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBY5Rtbj5r5qVU6S8XrzJfJH0-HX7gk-qg",
-    authDomain: "treelha.firebaseapp.com",
-    projectId: "treelha",
-    databaseURL: "https://treelha-default-rtdb.firebaseio.com",
-    storageBucket: "treelha.appspot.com",
-    messagingSenderId: "956720845117",
-    appId: "1:956720845117:web:3ba095dbdf7aba0c787554"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
 };
 
 firebase.initializeApp(firebaseConfig);
