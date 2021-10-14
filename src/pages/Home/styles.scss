@@ -1,0 +1,117 @@
+#page-home {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+
+    aside {
+        flex: 7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background:  var(--home-gradient), url(../../assets/images/bg-home.jpg) no-repeat;
+        background-size: 100%;
+        background-position: 10% 90%;
+
+        .aside-content {
+            flex: 7;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            margin-left: 44px;
+
+            p {
+                max-width: 532px;
+            }
+    
+            color: var(--bright);
+            font-weight: 600;
+            font-size: 36px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    
+            strong {
+                color: var(--light-green);
+            }
+    
+            span {
+                font-style: italic;
+                font-weight: normal;
+                font-size: 24px;
+            }
+        }
+
+
+
+    }
+
+    main {
+        flex: 8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .main-content {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 37px;
+
+            .login-button {
+                width: 300px;
+                height: 50px;
+                border-radius: 8px;
+                font-weight: 500;
+                background-color: #ea4335;
+                color: #fff;
+    
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                cursor: pointer;
+                border: 0;
+    
+                transition: filter 0.2s;
+    
+                img {
+                    margin-right: 8px;
+                }
+    
+                &:hover {
+                    filter: brightness(0.9);
+                }
+            }
+        }
+
+        footer {
+            position: fixed;
+            margin-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+
+            strong {
+                color: var(--yellow);
+            }
+        }
+        
+    }
+}
+
+
+@media (min-width: 800px) {
+
+    .aside-content {
+        p {
+            max-width: 800px;
+        }
+    }
+
+}
+
