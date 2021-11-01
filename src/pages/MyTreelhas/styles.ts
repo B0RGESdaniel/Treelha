@@ -12,7 +12,7 @@ export const PageHeader = styled.div`
     display: flex;
     width: 100%;
     padding: 1rem;
-    border-bottom: 2px solid var(--light-green);
+    border-bottom: 1px solid var(--bright-water-green);
     
     button {
         padding: 0.7rem 0.8rem;

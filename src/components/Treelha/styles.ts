@@ -56,7 +56,7 @@ export const TreelhaInfo = styled.div`
 export const Finished = styled.div`
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.2rem;
     img {
         width: 1rem;    
     }

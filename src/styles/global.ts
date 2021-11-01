@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import treeBgImg from '../assets/images/tree-fundo-maior.svg';
 
 export default createGlobalStyle`
     :root {
@@ -29,7 +30,9 @@ export default createGlobalStyle`
     }
 
     body {
-    background-color: var(--bright);
+    background: url(${treeBgImg}) -2% fixed  no-repeat;
+    background-size: 800px;
+    background-position: -2% 0%;
     color: var(--darker-green);
     }
 
