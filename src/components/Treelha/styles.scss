@@ -1,0 +1,49 @@
+.treelha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 880px;
+    height: 156px;
+    background-color: var(--bright);
+    border-radius: 15px;
+    border: 1px solid var(--dirty-green);
+    padding: 19px 35px 19px 20px;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        gap: 23px;
+        .treelha-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2px 0;
+            color: var(--dark-green);
+
+            strong {
+                color: var(--green);
+            }
+
+            .finished { 
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                img {
+                    width: 18px;    
+                }
+            }
+
+        }
+    
+        .type-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 114px;
+            height: 114px;
+            border-radius: 15px;
+            background: var(--icon-gradient);
+        }
+    }
+}
