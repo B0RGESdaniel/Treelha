@@ -1,7 +1,6 @@
 //import { useHistory } from "react-router-dom";
 
 import emptyImg from '../../assets/images/empty.svg';
-import './styles.scss';
 import plusImg from '../../assets/images/plus.svg'
 import { Treelha } from "../../components/Treelha";
 import { Header } from "../../components/Header";
@@ -16,6 +15,24 @@ export function MyTreelhas(){
     //     history.push('/treelhas/newtreelha')
     // }
 
+    const MOCK_TREELHAS = [
+        {
+            name: 'Pedra do elefante',
+            type: 'hiking',
+            date: '2021-10-28'
+        },
+        {
+            name: 'Parque da cidade',
+            type: 'walk',
+            date: '2021-10-20'
+        },
+        {
+            name: 'Sg - Cabo Frio',
+            type: 'bike',
+            date: '2021-10-26'
+        },
+    ]
+
     return(
         <>
             <Header/>
@@ -23,7 +40,7 @@ export function MyTreelhas(){
                 <PageHeader>
                     <button>
                         <img src={plusImg} alt="Adicionar" />
-                        Nova Trilha
+                        Nova Treelha
                     </button>
                 </PageHeader>
                 { empty ? (
@@ -36,7 +53,11 @@ export function MyTreelhas(){
                     </Empty>
                 ) : (
                     <TreelhaList>
-                        <Treelha name="Pedra do elefante" date="26-10-2021" type="hiking"/>
+                        { MOCK_TREELHAS.map(treelha => (
+                            <li>
+                                <Treelha name={treelha.name} type={treelha.type} date={treelha.date}/>
+                            </li>
+                        )) }
                     </TreelhaList>
                 ) }
 

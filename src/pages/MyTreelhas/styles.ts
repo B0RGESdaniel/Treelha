@@ -63,5 +63,11 @@ export const Empty = styled.div`
 `;
 
 export const TreelhaList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
 
+    list-style: none;
 `;
