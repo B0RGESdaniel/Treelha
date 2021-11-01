@@ -2,21 +2,23 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     :root {
-        --green: #29B672;
-        --light-green: #96C67F;
-        --dirty-green: #74948C;
-        --dark-green: #39645C;
-        --darker-green: #043433;
-        --title-green: #2C5449;
+        --green: #0B5E5C;
+        --light-green: #DFF0E6;
+        --dark-green: #1E403F;
+        --darker-green: #052A2A;
+        --water-green: #46A69E;
 
-        --bright: #FDFFFA; 
-        --cream: #DEE8C6; 
-        --yellow: #E6A72F;
+        --gray: #8BA5A4;
+        --gray-green: #B2CFCE;
+        --light-water-green: #DFF0EF;
+
+        --secondary-green: #066E50;
+        --bright-green: #67C44B;
+        --bright-water-green: #23C7B9;
         --google: #EA4335;
 
-        --title-gradient: linear-gradient(180deg, #043433 0%, #12816C 100%);
-        --icon-gradient: linear-gradient(180deg, #2C5449 0%, #043433 100%);
-        --home-gradient: linear-gradient(180deg, rgba(4, 78, 57, 0.65) 0%, rgba(4, 52, 51, 0.65) 100%);     
+        --icon-gradient: linear-gradient(180deg, #0B5E5C 0%, #043433 100%);
+        --home-gradient: linear-gradient(180deg, rgba(9, 79, 77, 0.8) 0%, rgba(5, 42, 42, 0.8) 100%);     
     }
     
     * {
