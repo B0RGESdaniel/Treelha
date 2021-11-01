@@ -1,4 +1,4 @@
-//import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import emptyImg from '../../assets/images/empty.svg';
 import plusImg from '../../assets/images/plus.svg'
@@ -9,11 +9,11 @@ import { Container, PageHeader, Empty, TreelhaList } from './styles';
 export function MyTreelhas(){
 
     const empty =  false;
-    // const history = useHistory();
+    const history = useHistory();
 
-    // function handleNewTreelha(){
-    //     history.push('/treelhas/newtreelha')
-    // }
+    function handleNewTreelha(){
+        history.push('/treelhas/newtreelha')
+    }
 
     const MOCK_TREELHAS = [
         {
@@ -35,10 +35,10 @@ export function MyTreelhas(){
 
     return(
         <>
-            <Header/>
+            <Header text="Sair"/>
             <Container>
                 <PageHeader>
-                    <button>
+                    <button onClick={handleNewTreelha}>
                         <img src={plusImg} alt="Adicionar" />
                         Nova Treelha
                     </button>

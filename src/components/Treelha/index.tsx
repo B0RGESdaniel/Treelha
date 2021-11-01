@@ -2,7 +2,7 @@ import hikingIcon from '../../assets/images/hiking.svg'
 import bikeIcon from '../../assets/images/bike.svg'
 import walkIcon from '../../assets/images/walk.svg'
 
-import settingsImg from '../../assets/images/settings.svg';
+import { FiChevronRight } from 'react-icons/fi'; 
 import checkImg from  '../../assets/images/check.svg';
 
 import { Container, Content, Finished, TreelhaInfo, TypeIcon } from './styles';
@@ -10,12 +10,7 @@ import { Container, Content, Finished, TreelhaInfo, TypeIcon } from './styles';
 type TreelhaData = {
     name: string;
     type: string;
-    // style: string;
-    // numberOfParticipants: number;
-    // address: string;
     date: string;
-    // time: string;
-    // whatsappGroupLink: string;
 }
 
 export function Treelha({name, type, date}:TreelhaData){
@@ -51,7 +46,7 @@ export function Treelha({name, type, date}:TreelhaData){
                         ) }
                 </TreelhaInfo>
             </Content>
-            <img src={settingsImg} alt="Editar trilha" />
+            <FiChevronRight size={25} color="#46A69E"/>
         </Container>
     )
 }

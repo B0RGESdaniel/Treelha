@@ -1,12 +1,21 @@
+import { useHistory } from "react-router-dom";
 import { Header } from "../../components/Header";
 //import { useForm } from "react-hook-form";
 
 import './styles.scss';
 
 export function NewTreelha(){
+
+    const history = useHistory();
+
+    function handleGoBackToMyTreelhas(){
+        history.push('/treelhas')
+    }
+
+
     return(
         <>
-            <Header/>
+            <Header text="Voltar" action={handleGoBackToMyTreelhas}/>
             <main>
             <form>
                 <input type="text" className="input name" placeholder="Nome da trilha" />
