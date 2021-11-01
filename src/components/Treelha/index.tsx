@@ -5,7 +5,7 @@ import walkIcon from '../../assets/images/walk.svg'
 import settingsImg from '../../assets/images/settings.svg';
 import checkImg from  '../../assets/images/check.svg';
 
-import './styles.scss';
+import { Container, Content, Finished, TreelhaInfo, TypeIcon } from './styles';
 
 type TreelhaData = {
     name: string;
@@ -26,8 +26,8 @@ export function Treelha({name, type, date}:TreelhaData){
         if(type === 'bike') return <img src={bikeIcon} alt="Pedalada" />;
     }
 
-    const today = new Date();
-    const treelhaDate = new Date('2021-10-20');
+    const today = new Date('2021-10-20');
+    const treelhaDate = new Date(date);
     const dateDifference = Math.abs(today.getTime() - treelhaDate.getTime()); 
     const daysRemaining = Math.ceil(dateDifference / (1000 * 60 * 60 * 24));
 
@@ -35,23 +35,23 @@ export function Treelha({name, type, date}:TreelhaData){
 
     
     return(
-        <div className="treelha">
-            <div className="content">
-                <div className="type-icon">
+        <Container>
+            <Content>
+                <TypeIcon>
                     { handleTypeIcon(type) }
-                </div>
-                <div className="treelha-info">
+                </TypeIcon>
+                <TreelhaInfo>
                     <h1>{name}</h1>
-                    { !(today === treelhaDate) ? (                     
+                    { !(dateDifference <= 0) ? (                     
                         <span>Faltam <strong>{daysRemaining}</strong> dias</span>
                         ) : (
-                            <div className="finished">
-                            <span>Concluído</span><img className="check" src={checkImg} alt="Concluído" />
-                            </div>
+                            <Finished>
+                                <span>Concluído</span><img className="check" src={checkImg} alt="Concluído" />
+                            </Finished>
                         ) }
-                </div>
-            </div>
+                </TreelhaInfo>
+            </Content>
             <img src={settingsImg} alt="Editar trilha" />
-        </div>
+        </Container>
     )
 }
