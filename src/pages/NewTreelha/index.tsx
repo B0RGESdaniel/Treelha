@@ -1,5 +1,4 @@
 import { Header } from "../../components/Header";
-import { PageHeader } from "../../components/PageHeader";
 //import { useForm } from "react-hook-form";
 
 import './styles.scss';
@@ -8,7 +7,6 @@ export function NewTreelha(){
     return(
         <>
             <Header/>
-            <PageHeader title="Crie sua trilha"/>
             <main>
             <form>
                 <input type="text" className="input name" placeholder="Nome da trilha" />

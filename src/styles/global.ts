@@ -36,4 +36,8 @@ export default createGlobalStyle`
     body, input, button, textarea {
         font: 16px 'Montserrat', sans-serif;
     }
+
+    button {
+        cursor: pointer;
+    }
 `;
