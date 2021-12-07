@@ -36,7 +36,7 @@ export default createGlobalStyle`
     color: var(--darker-green);
     }
 
-    body, input, button, textarea {
+    body, input, button, textarea, select {
         font: 16px 'Montserrat', sans-serif;
     }
 
